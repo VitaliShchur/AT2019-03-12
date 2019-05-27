@@ -16,12 +16,12 @@ public class Util {
     }
 
     public static WebElement find(WebDriver driver, By queryLocator) {
-        return (new WebDriverWait(driver, 25))
+        return (new WebDriverWait(driver, 5))
                 .until(ExpectedConditions.presenceOfElementLocated(queryLocator));
     }
 
     public static List<WebElement> findAll(WebDriver driver, By queryLocator) {
-        (new WebDriverWait(driver, 10))
+        (new WebDriverWait(driver, 5))
                 .until(ExpectedConditions.presenceOfElementLocated(queryLocator));
         return driver.findElements(queryLocator);
     }

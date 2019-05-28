@@ -1,8 +1,7 @@
-package by.it.udalyou.сucumber;
+package by.it.udalyou.cucumber;
 
 import by.it.udalyou.pages.ResultPage;
 import by.it.udalyou.pages.StartPage;
-import cucumber.api.PendingException;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -12,7 +11,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-import static afu.org.checkerframework.checker.units.UnitsTools.mm;
 import static org.testng.Assert.*;
 @Test
 public class TaskA {

@@ -2,16 +2,14 @@ package by.it.tsyhanova.pageObjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.CacheLookup;
-import org.openqa.selenium.support.FindAll;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.*;
 
 import java.util.List;
 
 public class SearchResultPage {
 
-    final WebDriver driver;
+    //final WebDriver driver;
+    WebDriver driver;
 
     //@FindBy(how = How.CLASS_NAME, using = "course")
     @FindAll(@FindBy(how = How.CLASS_NAME, using = "course"))
@@ -24,5 +22,10 @@ public class SearchResultPage {
 
 
     // This is a constructor, as every page need a base driver to find web elements
-    public SearchResultPage(WebDriver driver){this.driver = driver;}
+    //public SearchResultPage(WebDriver driver){this.driver = driver;}
+
+    public SearchResultPage(WebDriver driver) {
+        this.driver=driver;
+        PageFactory.initElements(driver, this);
+    }
 }

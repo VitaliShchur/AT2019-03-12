@@ -5,12 +5,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class StartPage {
 
-    final WebDriver driver;
-
-
+    //final WebDriver driver;
+    WebDriver driver;
 
     @FindBy(how = How.ID, using = "mat-input-0")
     @CacheLookup
@@ -38,6 +41,8 @@ public class StartPage {
     @CacheLookup
     public static WebElement buttonClick;
 
+
+
     public void SetFlightDetailes(String sOriginPlace, String sDestinationPlace, String sDepartureDate){
         onWay.click();
         originPlace.clear();
@@ -49,7 +54,28 @@ public class StartPage {
         buttonClick.click();
     }
 
+    public void SetOneWay(){
+        onWay.click();
+    }
+    public void SetOriginPlace(String sOriginPlace){
+        originPlace.clear();
+        originPlace.sendKeys(sOriginPlace);
+    }
+    public void SetDestinationPlace(String sDestinationPlace){
+        destinationPlace.sendKeys(sDestinationPlace);
+        destinationAirport.click();
+    }
+    public void SetDepartureDate(){
+        String sDepartureDate = new SimpleDateFormat("dd.MM.yyyy").format(new Date());
+        departureDate.sendKeys(sDepartureDate);
+        buttonClick.click();
+    }
+
     // This is a constructor, as every page need a base driver to find web elements
-    public StartPage(WebDriver driver){this.driver = driver;}
+    //public StartPage(WebDriver driver){this.driver = driver;}
+    public StartPage(WebDriver driver) {
+        this.driver=driver;
+        PageFactory.initElements(driver, this);
+    }
 
 }

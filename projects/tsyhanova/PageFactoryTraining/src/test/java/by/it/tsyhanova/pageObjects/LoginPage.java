@@ -5,10 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
 
-    final WebDriver driver;
+    //final WebDriver driver;
+    WebDriver driver;
 
     @FindBy(how = How.XPATH, using = "//*[@id='merlin-search-container']/div[2]/footer/div[1]/div[1]/a[1]")
     @CacheLookup
@@ -23,13 +25,23 @@ public class LoginPage {
     public static WebElement myPassword;
 
 
+    public void MyAccountClick(){
+        myAccount.click();
+    }
 
     // This method will take two arguments ( Username nd Password)
     public void LogInAction(String sUserName, String sPassword){
         userName.sendKeys(sUserName);
         myPassword.sendKeys(sPassword);
+
     }
     // This is a constructor, as every page need a base driver to find web elements
-    public LoginPage(WebDriver driver){this.driver = driver;}
+    //public LoginPage(WebDriver driver){this.driver = driver;}
+
+    public LoginPage(WebDriver driver) {
+        this.driver=driver;
+        PageFactory.initElements(driver, this);
+    }
+
 
 }

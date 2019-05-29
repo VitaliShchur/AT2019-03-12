@@ -1,0 +1,69 @@
+﻿Started by user tatsiana tsyhanova
+Running as SYSTEM
+Building in workspace C:\Program Files (x86)\Jenkins\workspace\hellowebdriver
+No credentials specified
+ > D:\QualityAssuarance\ProgrammesEquipment\PortableGit\bin\git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > D:\QualityAssuarance\ProgrammesEquipment\PortableGit\bin\git.exe config remote.origin.url https://github.com/TatsianaTsyhanova/AT2019-03-12.git # timeout=10
+Fetching upstream changes from https://github.com/TatsianaTsyhanova/AT2019-03-12.git
+ > D:\QualityAssuarance\ProgrammesEquipment\PortableGit\bin\git.exe --version # timeout=10
+ > D:\QualityAssuarance\ProgrammesEquipment\PortableGit\bin\git.exe fetch --tags --progress https://github.com/TatsianaTsyhanova/AT2019-03-12.git +refs/heads/*:refs/remotes/origin/*
+ > D:\QualityAssuarance\ProgrammesEquipment\PortableGit\bin\git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > D:\QualityAssuarance\ProgrammesEquipment\PortableGit\bin\git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision cfed039e6356219121fcf0da1c0a1182f5299d93 (refs/remotes/origin/master)
+ > D:\QualityAssuarance\ProgrammesEquipment\PortableGit\bin\git.exe config core.sparsecheckout # timeout=10
+ > D:\QualityAssuarance\ProgrammesEquipment\PortableGit\bin\git.exe checkout -f cfed039e6356219121fcf0da1c0a1182f5299d93
+Commit message: "Selenium Hello World TaskA and TaskB"
+ > D:\QualityAssuarance\ProgrammesEquipment\PortableGit\bin\git.exe rev-list --no-walk cfed039e6356219121fcf0da1c0a1182f5299d93 # timeout=10
+[hellowebdriver] $ cmd.exe /C "D:\QualityAssuarance\ProgrammesEquipment\apache-maven-3.6.1\bin\mvn.cmd -f '"C:\Program Files (x86)\Jenkins\workspace\hellowebdriver/projects/tsyhanova/hellowebdriver/pom.xml"' test && exit %%ERRORLEVEL%%"
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< by.it.tsyhanova:hellowebdriver >-------------------
+[INFO] Building hellowebdriver 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ hellowebdriver ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Program Files (x86)\Jenkins\workspace\hellowebdriver\projects\tsyhanova\hellowebdriver\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ hellowebdriver ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ hellowebdriver ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Program Files (x86)\Jenkins\workspace\hellowebdriver\projects\tsyhanova\hellowebdriver\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ hellowebdriver ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.1:test (default-test) @ hellowebdriver ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running by.it.tsyhanova.CheckGoogleSiteTest
+Starting ChromeDriver 74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}) on port 17262
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+мая 13, 2019 12:39:45 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Element <artifactId>selenium-java</artifactId> OK
+Java Version: 3.141.59
+Starting ChromeDriver 74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}) on port 3897
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+мая 13, 2019 12:39:53 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.766 s - in by.it.tsyhanova.CheckGoogleSiteTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  19.997 s
+[INFO] Finished at: 2019-05-13T12:39:58+03:00
+[INFO] ------------------------------------------------------------------------
+Finished: SUCCESS

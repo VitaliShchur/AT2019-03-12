@@ -12,6 +12,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 public class TestFlight {
@@ -39,8 +41,12 @@ public class TestFlight {
         LoginPage.LogInAction("by-@tut.by","NTAcWNFw27ACLHh\n");
         System.out.println("Login is Successful");
 
+        //определение текущей даты
+        String date = new SimpleDateFormat("dd.MM.yyyy").format(new Date());
+        System.out.println("The Date of Flight is "+date);
         Thread.sleep(5000);
-        StartPage.SetFlightDetailes("Минск","Москва","25.05.2019\n");
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        StartPage.SetFlightDetailes("Минск","Москва",date+"\n");
         System.out.println("Input of the Date is done.");
 
         Thread.sleep(5000);

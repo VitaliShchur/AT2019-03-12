@@ -1,0 +1,90 @@
+Microsoft Windows [Version 6.1.7601]
+(c) Корпорация Майкрософт (Microsoft Corp.), 2009. Все права защищены.
+
+C:\Users\Admin>allure --version
+2.9.0
+C:\Users\Admin>cd c:\program files\java\maven
+
+c:\Program Files\Java\maven>allure --vercion
+Could not parse arguments: Expected a command, got --vercion
+Usage: allure [options] [command] [command options]
+  Options:
+    --help
+      Print commandline help.
+    -q, --quiet
+      Switch on the quiet mode.
+      Default: false
+    -v, --verbose
+      Switch on the verbose mode.
+      Default: false
+    --version
+      Print commandline version.
+      Default: false
+  Commands:
+    generate      Generate the report
+      Usage: generate [options] The directories with allure results
+        Options:
+          -c, --clean
+            Clean Allure report directory before generating a new one.
+            Default: false
+          --config
+            Allure commandline config path. If specified overrides values f
+            --profile and --configDirectory.
+          --configDirectory
+            Allure commandline configurations directory. By default uses
+            ALLURE_HOME directory.
+          --profile
+            Allure commandline configuration profile.
+          -o, --report-dir, --output
+            The directory to generate Allure report into.
+            Default: allure-report
+
+    serve      Serve the report
+      Usage: serve [options] The directories with allure results
+        Options:
+          --config
+            Allure commandline config path. If specified overrides values f
+            --profile and --configDirectory.
+          --configDirectory
+            Allure commandline configurations directory. By default uses
+            ALLURE_HOME directory.
+          -h, --host
+            This host will be used to start web server for the report.
+          -p, --port
+            This port will be used to start web server for the report.
+            Default: 0
+          --profile
+            Allure commandline configuration profile.
+
+    open      Open generated report
+      Usage: open [options] The report directory
+        Options:
+          -h, --host
+            This host will be used to start web server for the report.
+          -p, --port
+            This port will be used to start web server for the report.
+            Default: 0
+
+    plugin      Generate the report
+      Usage: plugin [options]
+        Options:
+          --config
+            Allure commandline config path. If specified overrides values f
+            --profile and --configDirectory.
+          --configDirectory
+            Allure commandline configurations directory. By default uses
+            ALLURE_HOME directory.
+          --profile
+            Allure commandline configuration profile.
+
+
+
+c:\Program Files\Java\maven>allure serve E:\AT2019-03-12\projects\udalyou\h
+ebdriver\target\allure-results\
+Generating report to temp directory...
+Report successfully generated to C:\Users\Admin\AppData\Local\Temp\39883875
+46658\allure-report
+Starting web server...
+2019-05-29 20:48:52.382:INFO::main: Logging initialized @13293ms to org.ecl
+jetty.util.log.StdErrLog
+Server started at <http://192.168.100.3:49228/>. Press <Ctrl+C> to exit

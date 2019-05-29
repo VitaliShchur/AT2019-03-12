@@ -1,0 +1,30 @@
+package by.it.okoyro.at27;
+
+import java.util.Random;
+
+class Util {
+
+	static Random rnd = new Random();
+
+	private Util() {
+	}
+
+	static int random(int start, int stop) {
+		int delta = (stop - start);
+		return rnd.nextInt(delta) + start; // returns quantity of buyers randomly
+	}
+
+	static int random(int max) {
+		return random(0, max);
+	}
+
+
+	static void sleep(int timeout) {
+		try {
+			Thread.sleep(timeout / Dispatcher.K_SPEED);
+		}
+		catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+}

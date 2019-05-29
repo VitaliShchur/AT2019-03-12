@@ -2,16 +2,22 @@ package by.it.udalyou.at26;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class Market {
     public static void main(String[] args) {
+        Map<String, Double> good;
 
-        for (int j = 0; j < 1000; j++) {
+        for (int j = 0; j < 2; j++) {
             System.out.println("проверочный цикл "+j);
 
             Dispetcher.reset();
             List<Thread> threads = new ArrayList<>();
 
+
+            System.out.println("Ассортимент магазина:\n");
+            good=Util.getGoods();
+            System.out.println(good);
             for (int i = 1; i <= 2; i++) {
                 Cashier cashier = new Cashier(i);
                 Thread thread = new Thread(cashier);

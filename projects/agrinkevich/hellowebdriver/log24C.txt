@@ -1,0 +1,79 @@
+Started by user Alina Grinkevich
+Running as SYSTEM
+Building in workspace C:\Users\Alina\.jenkins\workspace\SeleniumJob
+No credentials specified
+ > git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/algrinkevich/AT2019-03-12.git # timeout=10
+Fetching upstream changes from https://github.com/algrinkevich/AT2019-03-12.git
+ > git.exe --version # timeout=10
+ > git.exe fetch --tags --progress https://github.com/algrinkevich/AT2019-03-12.git +refs/heads/*:refs/remotes/origin/*
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision a8ee59b39278561226ef8b23fa77ff49ab76e5bd (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f a8ee59b39278561226ef8b23fa77ff49ab76e5bd
+Commit message: "temporarily removed some tests"
+ > git.exe rev-list --no-walk ad1fdec8ff44de5844345a2a6b0b4f656d8cbc70 # timeout=10
+[SeleniumJob] $ cmd.exe /C "D:\autotesting\apache-maven-3.6.1\bin\mvn.cmd -f C:\Users\Alina\.jenkins\workspace\SeleniumJob\projects\agrinkevich\hellowebdriver\pom.xml test && exit %%ERRORLEVEL%%"
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------< by.it.agrinkevich:hellowebdriver >------------------
+[INFO] Building hellowebdriver 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ hellowebdriver ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\Alina\.jenkins\workspace\SeleniumJob\projects\agrinkevich\hellowebdriver\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ hellowebdriver ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ hellowebdriver ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\Alina\.jenkins\workspace\SeleniumJob\projects\agrinkevich\hellowebdriver\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ hellowebdriver ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 11 source files to C:\Users\Alina\.jenkins\workspace\SeleniumJob\projects\agrinkevich\hellowebdriver\target\test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.22.1:test (default-test) @ hellowebdriver ---
+[INFO]
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running TestSuite
+Starting ChromeDriver 74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}) on port 20962
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+мая 26, 2019 11:38:18 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Starting ChromeDriver 74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}) on port 10447
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+мая 26, 2019 11:38:35 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Starting ChromeDriver 74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}) on port 5441
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+мая 26, 2019 11:38:49 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Starting ChromeDriver 74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}) on port 19612
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+мая 26, 2019 11:38:55 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Version for selenium-java: 3.141.59
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 52.019 s - in TestSuite
+[INFO]
+[INFO] Results:
+[INFO]
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:24 min
+[INFO] Finished at: 2019-05-26T11:39:04+03:00
+[INFO] ------------------------------------------------------------------------
+Finished: SUCCESS

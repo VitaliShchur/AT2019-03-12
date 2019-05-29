@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<sites>
+    <site url="http://it.by">
+        <pages>
+            <page title="Main page">
+                <uri>/index</uri>
+                <elements>
+                    <element name="head">
+                        head for main
+                    </element>
+                    <element name="body">
+                        text for body
+                    </element>
+                </elements>
+            </page>
+            <page title="Login page">
+                <uri>/login</uri>
+                <elements>
+                    <element name="head">
+                        head for main
+                    </element>
+                    <element name="form">
+                        form login
+                    </element>
+                </elements>
+            </page>
+        </pages>
+    </site>
+    <site url="http://ya.ru">
+        <pages>
+            <page title="Index page">
+                <uri>/index</uri>
+                <elements>
+                    <element name="head">
+                        Search yandex
+                    </element>
+                    <element name="form">
+                        search form
+                    </element>
+                </elements>
+            </page>
+            <page title="Search result page">
+                <uri>/result</uri>
+                <elements>
+                    <element name="head">
+                        Search result Yandex
+                    </element>
+                    <element name="content">
+                        some content
+                    </element>
+                </elements>
+            </page>
+        </pages>
+    </site>
+</sites>

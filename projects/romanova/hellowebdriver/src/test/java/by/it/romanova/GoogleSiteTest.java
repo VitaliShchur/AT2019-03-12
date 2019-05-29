@@ -1,25 +1,26 @@
 package by.it.romanova;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
+@Test(groups = {"at23"})
 public class GoogleSiteTest {
 
     private WebDriver driver;
 
-    @Before
+    @BeforeMethod
     public void driverInit(){
         driver = new ChromeDriver();
     }
 
-    @Test
+    @Test(groups = {"at23"})
     public void findAnyResultByRequest(){
         driver.get("https://www.google.com");
         By input = By.xpath("//input[@class=\"gLFyf gsfi\"]");
@@ -36,7 +37,7 @@ public class GoogleSiteTest {
         return driver.findElement(query);
     }
 
-    @After
+    @AfterMethod
     public void driverQuit(){
         driver.quit();
     }

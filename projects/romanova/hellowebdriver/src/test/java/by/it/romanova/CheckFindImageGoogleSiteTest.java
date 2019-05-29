@@ -1,9 +1,5 @@
 package by.it.romanova;
 
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,11 +7,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Test(groups = {"at24"})
 public class CheckFindImageGoogleSiteTest {
 
     private static final String
@@ -34,13 +35,13 @@ public class CheckFindImageGoogleSiteTest {
                 .until(ExpectedConditions.presenceOfElementLocated(query));
     }
 
-    @Before
+   @BeforeMethod
     public void setUpBrowser(){
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
 
-    @Test
+    @Test(groups = {"at24"})
     public void taskA(){
         driver.get("https://www.google.com/");
 
@@ -64,7 +65,7 @@ public class CheckFindImageGoogleSiteTest {
 
     }
 
-    @Test
+    @Test(groups = {"at24"})
     public void taskB() throws InterruptedException {
         driver.get("https://www.google.com/");
 
@@ -107,7 +108,7 @@ public class CheckFindImageGoogleSiteTest {
         Assert.assertEquals(site,"https://www.seleniumhq.org/selenium-ide/");
     }
 
-    @After
+    @AfterMethod
     public void tearDownBrowser(){
         driver.quit();
     }

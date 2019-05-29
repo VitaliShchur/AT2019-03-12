@@ -21,7 +21,7 @@ public class ExpediaTest {
 
     @Test
     public void taskA() throws Exception {
-        driver.get("https://www.expedia.com/");
+        driver.get("https://www.expedia.com.my/");
 
         StartPage startPage = new StartPage(driver);
 

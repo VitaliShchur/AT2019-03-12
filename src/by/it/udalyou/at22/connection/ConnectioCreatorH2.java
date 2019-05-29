@@ -8,7 +8,8 @@ import java.sql.SQLException;
 public class ConnectioCreatorH2 implements ConnectionCreator{
 
     static {
-        URL resource = ConnectioCreatorH2.class.getClassLoader().getResource("udalyou.sql");
+        URL resource = ConnectioCreatorH2.class.getClassLoader().
+                getResource("udalyou.sql");
         String sqlFile=resource.toString();
        // String sqlFile=
         //  "C:/AT2019-03-12/src/by/it/udalyou/at21/create.sql";

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Custom suite">
+    <test verbose="1" name="webdrivertestng">
+        <groups>
+            <run>
+                <include name="at23"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="by.it.tsyhanova.CheckFindImageGoogleSiteTest"/>
+            <class name="by.it.tsyhanova.CheckSeleniumSiteTest"/>
+            <class name="by.it.tsyhanova.ExpediaTest"/>
+            <class name="by.it.tsyhanova.GoogleSiteTest"/>
+        </classes>
+    </test> <!-- hellowebdriver -->
+</suite> <!-- Custom suite -->

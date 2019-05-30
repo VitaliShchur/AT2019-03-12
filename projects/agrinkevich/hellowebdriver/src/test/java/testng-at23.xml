@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AT23">
+    <test name="at23">
+        <groups>
+            <run>
+                <include name="at23" />
+            </run>
+        </groups>
+        <classes>
+            <class name="by.it.agrinkevich.CheckGoogleSiteTest">
+                <methods>
+                    <include name="userTryFindHelloInGoogle"/>
+                </methods>
+            </class>
+            <class name="by.it.agrinkevich.CheckSeleniumSiteTest">
+                <methods>
+                    <include name="userCheckDependencyContainsText"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

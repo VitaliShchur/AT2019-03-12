@@ -5,7 +5,11 @@ import java.util.*;
 public class Buyer extends Thread implements IBuyer, IUseBasket {
 
 
-    boolean waiting;
+    private boolean waiting = false;
+
+    public void setWaiting(boolean waiting) {
+        this.waiting = waiting;
+    }
 
     final static HashMap<Good, Integer> goodNPrice=new HashMap<Good, Integer>() {
         {
@@ -66,7 +70,7 @@ public class Buyer extends Thread implements IBuyer, IUseBasket {
                 try {
                     this.wait();
                 } catch (InterruptedException e) {
-                    new RuntimeException(e);
+                    throw new RuntimeException(e);
                 }
             }
         }

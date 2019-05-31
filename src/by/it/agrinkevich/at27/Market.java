@@ -6,33 +6,30 @@ import java.util.concurrent.Executors;
 public class Market {
     public static void main(String[] args) {
 
-            Dispatcher.reset();
+        Dispatcher.reset();
 
-            ExecutorService threadPool= Executors.newFixedThreadPool(2);
-            for (int i = 1; i <= 2; i++) {
-                Cashier cashier = new Cashier(i);
-                threadPool.execute(cashier);
-            }
+        ExecutorService threadPool= Executors.newFixedThreadPool(2);
+        for (int i = 1; i <= 2; i++) {
+            Cashier cashier = new Cashier(i);
+            threadPool.execute(cashier);
+        }
 
-            threadPool.shutdown();
+        threadPool.shutdown();
 
-
-            System.out.println("Market opened");
-            while (Dispatcher.marketOpened()) {
-                Util.sleep(1000);
-                int count = Util.random(2);
-                for (int i = 0; i <= count; ++i) {
-                    if (Dispatcher.marketOpened()) {
-                        Buyer buyer = new Buyer(Dispatcher.buyerIn());
-                        buyer.start();
-                    }
+        System.out.println("Market opened");
+        while (Dispatcher.marketOpened()) {
+            Util.sleep(1000);
+            int count = Util.random(2);
+            for (int i = 0; i <= count; ++i) {
+                if (Dispatcher.marketOpened()) {
+                    Buyer buyer = new Buyer(Dispatcher.buyerIn());
+                    buyer.start();
                 }
             }
-
-            while (!threadPool.isTerminated()){
-                Util.sleep(10);
-            }
-
-            System.out.println("Market closed");
         }
+        while (!threadPool.isTerminated()){
+                Util.sleep(10);
+        }
+        System.out.println("Market closed");
+    }
 }

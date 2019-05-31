@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+        <suite name="Default Suite">
+
+    <!-- Default Suite -->
+
+
+    <test name="hellowebdriver">
+
+
+    <classes>
+
+    <class name="by.it.udalyou.CheckGoogleSiteTest"/>
+
+</classes>
+
+</test>
+
+    <!-- hellowebdriver -->
+
+
+</suite>

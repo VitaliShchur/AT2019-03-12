@@ -23,7 +23,7 @@ public class Cashier implements Runnable{
                 System.out.println(this+" started sevis of "+buyer);
                 Util.sleep(Util.random(2000,5000));
                 synchronized (buyer){
-                    buyer.notify();
+                    buyer.notifyAll();
                 }
                 System.out.println(this+" stoped sevis of "+buyer);
             }

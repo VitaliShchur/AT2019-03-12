@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+XML для запуска AT30 через TestNG
+Кроме этого из командной строки можно добиться того же через Maven
+mvn -Dtest=by.it.akhmelev.cucumber.BddAirLineTestest test
+-->
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default Suite">
+  <test name="hellowebdriver">
+    <classes>
+      <class name="by.it.akhmelev.cucumber.BddAirLineTest"/>
+    </classes>
+  </test> <!-- hellowebdriver -->
+</suite> <!-- Default Suite -->

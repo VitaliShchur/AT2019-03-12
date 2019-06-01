@@ -1,0 +1,87 @@
+Started by timer
+Building in workspace /var/lib/jenkins/workspace/TaskA
+No credentials specified
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/ikasabutskaya/AT2019-03-12.git # timeout=10
+Fetching upstream changes from https://github.com/ikasabutskaya/AT2019-03-12.git
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/ikasabutskaya/AT2019-03-12.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision fa5c7be687cdde8a54c72b8add31ea55a2ac6ab7 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f fa5c7be687cdde8a54c72b8add31ea55a2ac6ab7
+Commit message: "111"
+ > git rev-list --no-walk fa5c7be687cdde8a54c72b8add31ea55a2ac6ab7 # timeout=10
+[TaskA] $ mvn -f /var/lib/jenkins/workspace/TaskA/projects/ikasabutskaya/calculator/pom.xml test
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[INFO] Scanning for projects...
+[INFO]
+[INFO] -------------------< by.it.ikasabutskaya:calculator >-------------------
+[INFO] Building calculator 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ calculator ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /var/lib/jenkins/workspace/TaskA/projects/ikasabutskaya/calculator/src/main/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ calculator ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ calculator ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /var/lib/jenkins/workspace/TaskA/projects/ikasabutskaya/calculator/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ calculator ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-surefire-plugin:2.22.1:test (default-test) @ calculator ---
+[INFO]
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running by.it.ikasabutskaya.ScalarSumTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.158 s - in by.it.ikasabutskaya.ScalarSumTest
+[INFO] Running by.it.ikasabutskaya.VectorSubTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in by.it.ikasabutskaya.VectorSubTest
+[INFO] Running by.it.ikasabutskaya.ScalarCreateTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.03 s - in by.it.ikasabutskaya.ScalarCreateTest
+[INFO] Running by.it.ikasabutskaya.ScalarDivTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.043 s - in by.it.ikasabutskaya.ScalarDivTest
+[INFO] Running by.it.ikasabutskaya.VectorMulTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.033 s - in by.it.ikasabutskaya.VectorMulTest
+[INFO] Running by.it.ikasabutskaya.ScalarExceptionTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in by.it.ikasabutskaya.ScalarExceptionTest
+[INFO] Running by.it.ikasabutskaya.ScalarSubTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 s - in by.it.ikasabutskaya.ScalarSubTest
+[INFO] Running by.it.ikasabutskaya.VectorEvaluateTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.037 s - in by.it.ikasabutskaya.VectorEvaluateTest
+[INFO] Running by.it.ikasabutskaya.ParserTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in by.it.ikasabutskaya.ParserTest
+[INFO] Running by.it.ikasabutskaya.ScalarMulTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.068 s - in by.it.ikasabutskaya.ScalarMulTest
+[INFO] Running by.it.ikasabutskaya.ScalarEvaluateTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.027 s - in by.it.ikasabutskaya.ScalarEvaluateTest
+[INFO] Running by.it.ikasabutskaya.VectorSumTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 s - in by.it.ikasabutskaya.VectorSumTest
+[INFO] Running by.it.ikasabutskaya.VectorCreateTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 s - in by.it.ikasabutskaya.VectorCreateTest
+[INFO]
+[INFO] Results:
+[INFO]
+[INFO] Tests run: 58, Failures: 0, Errors: 0, Skipped: 0
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.949 s
+[INFO] Finished at: 2019-05-27T12:05:33Z
+[INFO] ------------------------------------------------------------------------
+Archiving artifacts
+Triggering a new build of TaskB
+Finished: SUCCESS

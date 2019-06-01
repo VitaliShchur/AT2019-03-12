@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+Проблема на занятии была не в IDEA а в версии TestNG
+Используйте ту, что указана в презентации 6.8 и все будет ок.
+
+Временные XML файлы появятся в каталоге
+C:\Users\user\.IntelliJIdea2017.1\system
+
+Это как раз такой файл.
+
+-->
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default Suite">
+  <test name="hellowebdriver">
+    <classes>
+      <class name="by.it.tsyhanova.CheckFindImageGoogleSiteTest"/>
+      <class name="by.it.tsyhanova.CheckGoogleSiteTest"/>
+      <class name="by.it.tsyhanova.ExpediaTest"/>
+    </classes>
+  </test> <!-- hellowebdriver -->
+</suite> <!-- Default Suite -->

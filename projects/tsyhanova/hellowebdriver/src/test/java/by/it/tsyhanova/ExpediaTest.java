@@ -30,18 +30,18 @@ public class ExpediaTest {
                 .selectOneWay()
                 .setOrigin("Minsk, Belarus (MSQ-All Airports)")
                 .setDestination("Moscow, Russia (MOW-All Airports)")
-                .setDepartingDate("05/24/2019")
+                .setDepartingDate("05/30/2019")
                 .getSearch();
 
         int resultSearchCount = resultPage.getResultSearchCount();
         Assert.assertTrue(resultSearchCount > 1);
     }
-    @Test
+    /*@Test
     public void taskB(){
         driver.get("https://www.expedia.com/");
 
 
-    }
+    }*/
 
     @After
     public void tearDownBrowser() {

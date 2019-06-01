@@ -26,7 +26,7 @@ public class ExpediaTest {
 
     @Test
     public void taskA() throws Exception {
-        driver.get("https://www.expedia.com/");
+        driver.get("https://www.expedia.com.my/");
 
         StartPage startPage = new StartPage(driver);
 
@@ -35,7 +35,7 @@ public class ExpediaTest {
                 .selectOneWay()
                 .setOrigin("Minsk, Belarus (MSQ-All Airports)")
                 .setDestination("Moscow, Russia (MOW-All Airports)")
-                .setDepartingDate("06/22/2019")
+                .setDepartingDate("06/06/2019")
                 .getSearch();
 
         int resultSearchCount = resultPage.getResultSearchCount();

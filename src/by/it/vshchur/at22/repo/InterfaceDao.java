@@ -1,9 +1,9 @@
-package by.it.vshchur.at22;
+package by.it.vshchur.at22.repo;
 
 import java.sql.SQLException;
 import java.util.List;
 
-public interface InterfaceDao<TYPE> {
+public interface InterfaceDao <TYPE>{
     TYPE read(long id) throws SQLException;
 
     boolean create(TYPE bean) throws SQLException;

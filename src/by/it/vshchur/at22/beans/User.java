@@ -1,10 +1,10 @@
-package by.it.vshchur.at22;
+package by.it.vshchur.at22.beans;
 
 import java.util.Date;
 
 public class User {
 
-    private long id;
+    private long  id;
     private String username;
     private String password;
     private String email;
@@ -21,10 +21,10 @@ public class User {
         this.date = date;
     }
 
+
     public long getId() {
         return id;
     }
-
     public void setId(long id) {
         this.id = id;
     }
@@ -32,19 +32,15 @@ public class User {
     public String getUsername() {
         return username;
     }
-
     public void setUsername(String username) {
         this.username = username;
     }
-
     public String getPassword() {
         return password;
     }
-
     public void setPassword(String password) {
         this.password = password;
     }
-
     public String getEmail() {
         return email;
     }
@@ -56,11 +52,26 @@ public class User {
     public Date getDate() {
         return date;
     }
-
     public void setDate(Date date) {
         this.date = date;
     }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
+        User user = (User) o;
+
+        if (username != null ? !username.equals(user.username) : user.username != null) return false;
+        if (password != null ? !password.equals(user.password) : user.password != null) return false;
+        if (email != null ? !email.equals(user.email) : user.email != null) return false;
+        return date != null ? date.equals(user.date) : user.date == null;
+    }
+
+    @Override
+    public int hashCode() {
+        return (int) id;
+    }
     @Override
     public String toString() {
         return "User{" +

@@ -1,4 +1,4 @@
-package by.it.vshchur.at22;
+package by.it.vshchur.at22.connection;
 
 import java.sql.Connection;
 import java.sql.SQLException;

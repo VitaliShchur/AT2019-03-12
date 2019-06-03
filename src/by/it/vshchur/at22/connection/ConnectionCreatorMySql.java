@@ -1,4 +1,4 @@
-package by.it.vshchur.at22;
+package by.it.vshchur.at22.connection;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,28 +8,24 @@ public class ConnectionCreatorMySql implements ConnectionCreator {
 
 
     static {
-        try { //mysql-connector 8.0.15
+        try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
-            System.out.println("Not found Driver");
+            System.out.println("Driver not found");
         }
     }
 
-    private static final String URL = "" +
-            "jdbc:mysql://127.0.0.1:3306/akhmelev" +
+    private final static String URL = ""+
+            "jdbc:mysql://127.0.0.1:3306/vshchur" +
             "?useUnicode=true" +
             "&useJDBCCompliantTimezoneShift=true" +
             "&useLegacyDatetimeCode=false" +
             "&serverTimezone=UTC";
-    private static final String LOGIN="root";
-    private static final String PASSWORD="";
+    private static final  String LOGIN = "root";
+    private static final String PASSWORD = "";
 
     @Override
     public Connection get() throws SQLException {
-        return DriverManager.getConnection(URL,LOGIN,PASSWORD);
+        return DriverManager.getConnection(URL, LOGIN, PASSWORD);
     }
-
-
 }
-
-

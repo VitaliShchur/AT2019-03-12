@@ -1,34 +1,38 @@
 package by.it.vshchur.at22;
 
+import by.it.vshchur.at22.beans.User;
+
 import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.Date;
 
+import static by.it.vshchur.at22.Dao.TypeDao.MY_SQL;
+
 public class Runner {
     public static void main(String[] args) throws SQLException {
-        //проверим чтение
-        UserDao userDao = new UserDao();
-        User user = userDao.read(3);
-        System.out.println("user after read 3: " + user);
 
-        //проверим создание
+        //user reading
+        Dao dao = new Dao(MY_SQL);
+        User user = dao.user.read(3);
+        System.out.println("user after read: "+user);
+
+        //user creation
         Date date = Timestamp.valueOf(LocalDateTime.now());
         user = new User(0, "NEW_LOGIN", "NEW_PASSWORD", "NEW_EMAIL", date);
-        userDao.create(user);
-        user = userDao.read(user.getId());
+        dao.user.create(user);
+        user = dao.user.read(user.getId());
         System.out.println("user after create: " + user);
 
-        //проверим обновление
+        //user update
         user.setUsername("LOGIN_UPDATE");
-        userDao.update(user);
-        user = userDao.read(user.getId());
+        dao.user.update(user);
+        user = dao.user.read(user.getId());
         System.out.println("user after update: " + user);
 
-        //проверим удаление
-        userDao.delete(user);
-        user = userDao.read(user.getId());
+        //user deletion
+        dao.user.delete(user);
+        user = dao.user.read(user.getId());
         System.out.println("user after delete: " + user);
-
     }
 }

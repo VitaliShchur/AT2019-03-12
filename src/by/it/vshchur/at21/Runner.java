@@ -12,7 +12,7 @@ public class Runner {
         //user reading
         UserDao userDao = new UserDao();
         User user = userDao.read(3);
-        System.out.println(user);
+        System.out.println("user after read: "+user);
 
         //user creation
         Date date = Timestamp.valueOf(LocalDateTime.now());

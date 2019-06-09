@@ -7,13 +7,13 @@ import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.Date;
 
-import static by.it.vshchur.at22.Dao.TypeDao.MY_SQL;
+import static by.it.vshchur.at22.Dao.TypeDao.H2;
 
 public class Runner {
     public static void main(String[] args) throws SQLException {
 
         //user reading
-        Dao dao = new Dao(MY_SQL);
+        Dao dao = new Dao(H2);
         User user = dao.user.read(3);
         System.out.println("user after read: "+user);
 

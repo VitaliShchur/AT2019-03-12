@@ -4,6 +4,7 @@ import by.it.vshchur.at22.connection.ConnectionCreator;
 import by.it.vshchur.at22.connection.ConnectionCreatorH2;
 import by.it.vshchur.at22.connection.ConnectionCreatorMySql;
 import by.it.vshchur.at22.repo.UserDao;
+import by.it.vshchur.at22.repo.CategoryDao;
 
 import java.util.NoSuchElementException;
 
@@ -15,6 +16,7 @@ public class Dao {
 
     //all bean DAO
     public UserDao user;
+    public CategoryDao category;
 
     public Dao(TypeDao typeDao) {
         ConnectionCreator connectionCreator;
@@ -26,8 +28,9 @@ public class Dao {
                 connectionCreator = new ConnectionCreatorH2();
                 break;
             default:
-                throw new NoSuchElementException("not defined type connection");
+                throw new NoSuchElementException("connection type isn't defined");
         }
         user = new UserDao(connectionCreator);
+        category = new CategoryDao(connectionCreator);
     }
 }

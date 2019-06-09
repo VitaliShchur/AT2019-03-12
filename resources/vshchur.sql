@@ -5,7 +5,7 @@ DROP SCHEMA IF EXISTS `vshchur`;
 -- -----------------------------------------------------
 -- Schema vshchur
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `vshchur` DEFAULT CHARACTER SET utf8 ;
+CREATE SCHEMA IF NOT EXISTS `vshchur`;
 
 
 -- -----------------------------------------------------
@@ -56,6 +56,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Data for table `vshchur`.`user`
 -- -----------------------------------------------------
+
 INSERT INTO `vshchur`.`user` (`id`, `username`, `email`, `password`, `create_time`) VALUES (1, 'default', 'def@mail.ru', 'qwerty', DEFAULT);
 INSERT INTO `vshchur`.`user` (`id`, `username`, `email`, `password`, `create_time`) VALUES (2, 'user', 'user@mail.ru', 'asdfgh', DEFAULT);
 INSERT INTO `vshchur`.`user` (`id`, `username`, `email`, `password`, `create_time`) VALUES (3, 'admin', 'admin@google.com', 'zxcvbn', DEFAULT);
@@ -65,6 +66,7 @@ INSERT INTO `vshchur`.`user` (`id`, `username`, `email`, `password`, `create_tim
 -- -----------------------------------------------------
 -- Data for table `vshchur`.`category`
 -- -----------------------------------------------------
+
 INSERT INTO `vshchur`.`category` (`id`, `name`) VALUES (1, 'SCALAR');
 INSERT INTO `vshchur`.`category` (`id`, `name`) VALUES (2, 'VECTOR');
 INSERT INTO `vshchur`.`category` (`id`, `name`) VALUES (3, 'MATRIX');
@@ -73,6 +75,8 @@ INSERT INTO `vshchur`.`category` (`id`, `name`) VALUES (3, 'MATRIX');
 
 -- -----------------------------------------------------
 -- Data for table `vshchur`.`variable`
+-- -----------------------------------------------------
+
 INSERT INTO `vshchur`.`variable` (`id`, `name`, `text`, `user_id`, `category_id`) VALUES (1, 'A', '111', 1, 1);
 
 

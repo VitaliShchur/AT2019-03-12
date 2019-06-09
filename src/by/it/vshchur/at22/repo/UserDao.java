@@ -2,7 +2,6 @@ package by.it.vshchur.at22.repo;
 
 import by.it.vshchur.at22.beans.User;
 import by.it.vshchur.at22.connection.ConnectionCreator;
-import by.it.vshchur.at22.connection.ConnectionCreatorMySql;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

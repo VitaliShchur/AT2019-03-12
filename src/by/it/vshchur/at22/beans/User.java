@@ -1,6 +1,7 @@
 package by.it.vshchur.at22.beans;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class User {
 
@@ -55,17 +56,28 @@ public class User {
     public void setDate(Date date) {
         this.date = date;
     }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//
+//        User user = (User) o;
+//
+//        if (username != null ? !username.equals(user.username) : user.username != null) return false;
+//        if (password != null ? !password.equals(user.password) : user.password != null) return false;
+//        if (email != null ? !email.equals(user.email) : user.email != null) return false;
+//        return date != null ? date.equals(user.date) : user.date == null;
+//    }
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         User user = (User) o;
-
-        if (username != null ? !username.equals(user.username) : user.username != null) return false;
-        if (password != null ? !password.equals(user.password) : user.password != null) return false;
-        if (email != null ? !email.equals(user.email) : user.email != null) return false;
-        return date != null ? date.equals(user.date) : user.date == null;
+        return Objects.equals(username, user.username) &&
+                Objects.equals(password, user.password) &&
+                Objects.equals(email, user.email);
     }
 
     @Override
